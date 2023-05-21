@@ -1,4 +1,4 @@
-import { useEffect } from "preact/hooks";
+import Image from "deco-sites/std/components/Image.tsx";
 
 export interface Props {
   menuHamburger?: Array<{
@@ -137,11 +137,12 @@ const Header = (props: Props) => {
         </div>
 
         <div className="justify-left md:justify-center flex flex-col md:navbar-center">
-          <img
-            src={logo?.src}
+          <Image
+            src={logo?.src || ""}
             alt={logo?.alt}
             width={logo?.width || 100}
             height={logo?.height || 50}
+            loading="eager"
           />
 
           {searchInput
