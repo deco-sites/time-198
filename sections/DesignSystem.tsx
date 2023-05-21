@@ -67,6 +67,16 @@ export interface OptionalColors {
   "base-300"?: string;
   /**
    * @format color
+   * @description Will be a darker tone of base-300 if not specified
+   */
+  "base-400"?: string;
+  /**
+   * @format color
+   * @description Will be a darker tone of base-400 if not specified
+   */
+  "base-500"?: string;
+  /**
+   * @format color
    * @description Will be a readable tone of base-100 if not specified
    */
   "base-content"?: string;
@@ -94,6 +104,11 @@ export interface OptionalColors {
    * @description Will be a readable tone of info if not specified
    */
   "info-content"?: string;
+  /**
+   * @format color
+   * @description Will be a darker tone if not specified
+   */
+  "custom-1"?: string;
 }
 
 export interface Colors {
@@ -298,6 +313,9 @@ const toVariables = (t: Theme): [string, string][] => {
     "--border-btn": t["--border-btn"],
     "--tab-border": t["--tab-border"],
     "--tab-radius": t["--tab-radius"],
+    "--custom-1": t["custom-1"] ?? "orange",
+    "--base-400": t["base-400"] ?? "gray",
+    "--base-500": t["base-500"] ?? "gray",
   });
 
   return [...colorVariables, ...miscellaneousVariables];

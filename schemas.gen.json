@@ -7825,6 +7825,24 @@
           "description": "Will be a darker tone of base-200 if not specified",
           "title": "Base-300"
         },
+        "base-400": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "description": "Will be a darker tone of base-300 if not specified",
+          "title": "Base-400"
+        },
+        "base-500": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "description": "Will be a darker tone of base-400 if not specified",
+          "title": "Base-500"
+        },
         "base-content": {
           "type": [
             "string",
@@ -7869,12 +7887,21 @@
           "format": "color",
           "description": "Will be a readable tone of info if not specified",
           "title": "Info-content"
+        },
+        "custom-1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "description": "Will be a darker tone if not specified",
+          "title": "Custom-1"
         }
       },
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@547d1aa5f349d8a61426907dd33467ca&Colors": {
+    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@78a3fd2d0eb8e8f7ea625b01c0f83e7a&Colors": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors"
@@ -7890,7 +7917,7 @@
           "required": []
         }
       ],
-      "title": "547d1aa5f349d8a61426907dd33467ca&Colors"
+      "title": "78a3fd2d0eb8e8f7ea625b01c0f83e7a&Colors"
     },
     "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Miscellaneous": {
       "type": "object",
@@ -7993,7 +8020,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@547d1aa5f349d8a61426907dd33467ca&Colors",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@78a3fd2d0eb8e8f7ea625b01c0f83e7a&Colors",
           "title": "Colors"
         },
         "miscellaneous": {
