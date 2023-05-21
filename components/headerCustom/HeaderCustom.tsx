@@ -53,9 +53,9 @@ const Header = (props: Props) => {
     <>
       <header
         id="fixed-header"
-        className="navbar z-50 fixed top-0 bg-white px-8 py-7 max-h-[80px] min-h-[72px] w-full  border border-solid border-b-primary bg-base lg:px-16 flex gap-8"
+        className="navbar z-50 fixed top-0 justify-between bg-white md:px-8 py-7 max-h-[80px] min-h-[72px] w-full  border border-solid border-b-primary bg-base lg:px-16 flex md:gap-8"
       >
-        <div className="md:justify-center md:navbar-start">
+        <div className=" md:navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <svg
@@ -136,7 +136,7 @@ const Header = (props: Props) => {
           </div>
         </div>
 
-        <div className="w-1/4 justify-left md:justify-center flex flex-col md:navbar-center">
+        <div className="justify-left md:justify-center flex flex-col md:navbar-center">
           <img
             src={logo?.src}
             alt={logo?.alt}
@@ -149,6 +149,7 @@ const Header = (props: Props) => {
               <div className="hidden form-control justify-center  relative lg:flex">
                 <input
                   type="text"
+                  aria-label="Search"
                   placeholder="Search"
                   className="input input-bordered w-full pl-11"
                 />
@@ -169,8 +170,12 @@ const Header = (props: Props) => {
             : null}
         </div>
 
-        <div className="w-2/4 justify-center  gap-6 md:navbar-end">
-          <button className="btn btn-ghost" href={iconsUrls?.search}>
+        <div className="pr:2 md:pr:0 md:justify-center md:gap-6 md:navbar-end">
+          <button
+            className="btn btn-ghost"
+            href={iconsUrls?.search}
+            aria-label="search-button"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -189,6 +194,7 @@ const Header = (props: Props) => {
 
           <button
             className="hidden btn btn-ghost xl:inline-flex"
+            aria-label="favorites-button"
             href={iconsUrls?.heart}
           >
             <svg
@@ -208,6 +214,7 @@ const Header = (props: Props) => {
 
           <button
             className="hidden btn btn-ghost xl:inline-flex"
+            aria-label="Location Button"
             href={iconsUrls?.location}
           >
             <svg
@@ -227,6 +234,7 @@ const Header = (props: Props) => {
 
           <button
             className="hidden btn btn-ghost xl:inline-flex"
+            aria-label="user account Button"
             href={iconsUrls?.person}
           >
             <svg
@@ -244,7 +252,11 @@ const Header = (props: Props) => {
             </svg>
           </button>
 
-          <button className="btn btn-ghost" href={iconsUrls?.shop}>
+          <button
+            className="btn btn-ghost"
+            href={iconsUrls?.shop}
+            aria-label="shopping cart Button"
+          >
             <svg
               className="h-6 w-6"
               viewBox="0 0 24 24"
@@ -258,7 +270,7 @@ const Header = (props: Props) => {
             </svg>
           </button>
 
-          <div className="dropdown dropdown-end flex items-center justify-center">
+          <div className="dropdown dropdown-end  items-center justify-center hidden xl:flex">
             <svg
               className="h-6 w-6"
               viewBox="0 0 20 20"

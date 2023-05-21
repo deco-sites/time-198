@@ -25,7 +25,7 @@ function HeroBanner({
   if (!image) return null;
 
   return (
-    <div className="w-full h-[380px] relative">
+    <div className="w-full h-[380px] relative mt-20">
       <div className="flex flex-col items-center py-10 px-6 backdrop-blur-sm text-base-500 absolute top-1/2 right-24 transform -translate-y-1/2 bg-white outline outline-offset-2 outline-white">
         <h2 className="text-xl">{title}</h2>
         {description ? <p className="text-sm">{description}</p> : null}
@@ -45,8 +45,8 @@ function HeroBanner({
         alt={image.alt}
         width={image.width}
         height={image.height}
-        loading="lazy"
-        decoding="async"
+        loading="eager"
+        preload
       />
     </div>
   );
