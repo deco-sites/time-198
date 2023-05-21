@@ -60,8 +60,10 @@
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "./islands/AddToCartButton.tsx",
               "./islands/HeaderButton.tsx",
+              "./islands/HeaderCustom.tsx",
               "./islands/HeaderModals.tsx",
               "./islands/HeaderSearchbar.tsx",
+              "./islands/LoginForm.tsx",
               "./islands/Newsletter.tsx",
               "./islands/OutOfStock.tsx",
               "./islands/ProductImageZoom.tsx",
@@ -104,6 +106,7 @@
               "deco-sites/time-198/sections/HeroBanner/HeroBanner.198.tsx",
               "deco-sites/time-198/sections/Highlights.tsx",
               "deco-sites/time-198/sections/LinkTree.tsx",
+              "deco-sites/time-198/sections/LoginForm/LoginForm.tsx",
               "deco-sites/time-198/sections/ProductDetails.tsx",
               "deco-sites/time-198/sections/ProductList/ProductList.198.tsx",
               "deco-sites/time-198/sections/ProductShelf.tsx",
@@ -6588,6 +6591,315 @@
       ],
       "title": "deco-sites/std/packs/vtex/loaders/wishlist.ts@Props"
     },
+    "ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL2hlYWRlckN1c3RvbS9IZWFkZXJDdXN0b20udHN4@Props": {
+      "type": "object",
+      "properties": {
+        "menuHamburger": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Title"
+              },
+              "url": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Url"
+              }
+            },
+            "required": []
+          },
+          "title": "Menu Hamburger"
+        },
+        "titleMenuDropdown": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title Menu Dropdown"
+        },
+        "menuDropdown": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Title"
+              },
+              "url": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Url"
+              }
+            },
+            "required": []
+          },
+          "title": "Menu Dropdown"
+        },
+        "menuOthers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Title"
+              },
+              "url": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "title": "Url"
+              }
+            },
+            "required": []
+          },
+          "title": "Menu Others"
+        },
+        "logo": {
+          "type": "object",
+          "properties": {
+            "src": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Src"
+            },
+            "alt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt"
+            },
+            "width": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "title": "Width"
+            },
+            "height": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "title": "Height"
+            }
+          },
+          "required": [],
+          "title": "Logo"
+        },
+        "searchInput": {
+          "type": "object",
+          "properties": {
+            "placeholder": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Placeholder"
+            }
+          },
+          "required": [],
+          "title": "Search Input"
+        },
+        "iconsUrls": {
+          "type": "object",
+          "properties": {
+            "search": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Search"
+            },
+            "heart": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Heart"
+            },
+            "location": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Location"
+            },
+            "person": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Person"
+            },
+            "shop": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Shop"
+            }
+          },
+          "required": [],
+          "title": "Icons Urls"
+        },
+        "button": {
+          "type": "object",
+          "properties": {
+            "active": {
+              "anyOf": [
+                {
+                  "type": "boolean",
+                  "const": true
+                },
+                {
+                  "type": "boolean",
+                  "const": false
+                }
+              ],
+              "type": "boolean",
+              "title": "Active"
+            },
+            "label": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Label"
+            },
+            "url": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Url"
+            }
+          },
+          "required": [],
+          "title": "Button"
+        },
+        "language": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Language"
+        }
+      },
+      "required": [
+        "logo"
+      ],
+      "title": "deco-sites/time-198/components/headerCustom/HeaderCustom.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL2xvZ2luRm9ybS9Mb2dpbkZvcm0udHN4@Props": {
+      "type": "object",
+      "properties": {
+        "logo": {
+          "type": "object",
+          "properties": {
+            "src": {
+              "type": "string",
+              "title": "Src"
+            },
+            "alt": {
+              "type": "string",
+              "title": "Alt"
+            },
+            "width": {
+              "type": "number",
+              "title": "Width"
+            },
+            "height": {
+              "type": "number",
+              "title": "Height"
+            }
+          },
+          "required": [
+            "src",
+            "alt",
+            "width",
+            "height"
+          ],
+          "title": "Logo"
+        },
+        "userNameInput": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "title": "Label"
+            },
+            "placeholder": {
+              "type": "string",
+              "title": "Placeholder"
+            }
+          },
+          "required": [
+            "label",
+            "placeholder"
+          ],
+          "title": "User Name Input"
+        },
+        "passwordInput": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "title": "Label"
+            },
+            "placeholder": {
+              "type": "string",
+              "title": "Placeholder"
+            }
+          },
+          "required": [
+            "label",
+            "placeholder"
+          ],
+          "title": "Password Input"
+        },
+        "loginButton": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "title": "Label"
+            }
+          },
+          "required": [
+            "label"
+          ],
+          "title": "Login Button"
+        }
+      },
+      "required": [
+        "userNameInput",
+        "passwordInput",
+        "loginButton"
+      ],
+      "title": "deco-sites/time-198/components/loginForm/LoginForm.tsx@Props"
+    },
     "ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL3Byb2R1Y3RMaXN0L0hlYWRlci50c3g=@Props": {
       "type": "object",
       "properties": {
@@ -8566,227 +8878,6 @@
         "alerts"
       ],
       "title": "deco-sites/time-198/components/header/Header.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL2hlYWRlckN1c3RvbS9IZWFkZXJDdXN0b20udHN4@Props": {
-      "type": "object",
-      "properties": {
-        "menuHamburger": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "title": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "title": "Title"
-              },
-              "url": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "title": "Url"
-              }
-            },
-            "required": []
-          },
-          "title": "Menu Hamburger"
-        },
-        "titleMenuDropdown": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Title Menu Dropdown"
-        },
-        "menuDropdown": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "title": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "title": "Title"
-              },
-              "url": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "title": "Url"
-              }
-            },
-            "required": []
-          },
-          "title": "Menu Dropdown"
-        },
-        "menuOthers": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "title": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "title": "Title"
-              },
-              "url": {
-                "type": [
-                  "string",
-                  "null"
-                ],
-                "title": "Url"
-              }
-            },
-            "required": []
-          },
-          "title": "Menu Others"
-        },
-        "logo": {
-          "type": "object",
-          "properties": {
-            "src": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Src"
-            },
-            "alt": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Alt"
-            },
-            "width": {
-              "type": [
-                "number",
-                "null"
-              ],
-              "title": "Width"
-            },
-            "height": {
-              "type": [
-                "number",
-                "null"
-              ],
-              "title": "Height"
-            }
-          },
-          "required": [],
-          "title": "Logo"
-        },
-        "searchInput": {
-          "anyOf": [
-            {
-              "type": "boolean",
-              "const": true
-            },
-            {
-              "type": "boolean",
-              "const": false
-            }
-          ],
-          "type": "boolean",
-          "title": "Search Input"
-        },
-        "iconsUrls": {
-          "type": "object",
-          "properties": {
-            "search": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Search"
-            },
-            "heart": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Heart"
-            },
-            "location": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Location"
-            },
-            "person": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Person"
-            },
-            "shop": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Shop"
-            }
-          },
-          "required": [],
-          "title": "Icons Urls"
-        },
-        "button": {
-          "type": "object",
-          "properties": {
-            "active": {
-              "anyOf": [
-                {
-                  "type": "boolean",
-                  "const": true
-                },
-                {
-                  "type": "boolean",
-                  "const": false
-                }
-              ],
-              "type": "boolean",
-              "title": "Active"
-            },
-            "label": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Label"
-            },
-            "url": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Url"
-            }
-          },
-          "required": [],
-          "title": "Button"
-        },
-        "language": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "title": "Language"
-        }
-      },
-      "required": [
-        "logo"
-      ],
-      "title": "deco-sites/time-198/components/headerCustom/HeaderCustom.tsx@Props"
     },
     "ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL2Jhbm5lcnMvYmFubmVySGVyby50c3g=@Props": {
       "type": "object",
@@ -10891,6 +10982,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0hlYWRlckN1c3RvbS50c3g=": {
+      "title": "./islands/HeaderCustom.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL2hlYWRlckN1c3RvbS9IZWFkZXJDdXN0b20udHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/HeaderCustom.tsx"
+          ],
+          "default": "./islands/HeaderCustom.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0hlYWRlck1vZGFscy50c3g=": {
       "title": "./islands/HeaderModals.tsx",
       "type": "object",
@@ -10920,6 +11032,27 @@
             "./islands/HeaderSearchbar.tsx"
           ],
           "default": "./islands/HeaderSearchbar.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0xvZ2luRm9ybS50c3g=": {
+      "title": "./islands/LoginForm.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL2xvZ2luRm9ybS9Mb2dpbkZvcm0udHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/LoginForm.tsx"
+          ],
+          "default": "./islands/LoginForm.tsx"
         }
       }
     },
@@ -11771,6 +11904,27 @@
             "deco-sites/time-198/sections/LinkTree.tsx"
           ],
           "default": "deco-sites/time-198/sections/LinkTree.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9Mb2dpbkZvcm0vTG9naW5Gb3JtLnRzeA==": {
+      "title": "deco-sites/time-198/sections/LoginForm/LoginForm.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL2xvZ2luRm9ybS9Mb2dpbkZvcm0udHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/time-198/sections/LoginForm/LoginForm.tsx"
+          ],
+          "default": "deco-sites/time-198/sections/LoginForm/LoginForm.tsx"
         }
       }
     },
@@ -12752,10 +12906,16 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g="
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlckN1c3RvbS50c3g="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlck1vZGFscy50c3g="
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlclNlYXJjaGJhci50c3g="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0xvZ2luRm9ybS50c3g="
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL05ld3NsZXR0ZXIudHN4"
@@ -12906,6 +13066,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9MaW5rVHJlZS50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9Mb2dpbkZvcm0vTG9naW5Gb3JtLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9Qcm9kdWN0RGV0YWlscy50c3g="
