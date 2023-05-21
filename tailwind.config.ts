@@ -58,6 +58,11 @@ export default {
           },
         },
       },
+      colors: {
+        "custom-1": "var(--custom-1)",
+        "base-400": "var(--base-400)",
+        "base-500": "var(--base-500)",
+      },
     },
   },
 };

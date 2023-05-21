@@ -47,7 +47,6 @@ const Modal = ({
   loading,
   ...props
 }: Props) => {
-  console.log("🚀 ~ file: Modal.tsx:50 ~ onClose:", onClose);
   const lazy = useSignal(false);
   const ref = useRef<HTMLDialogElement>(null);
 

@@ -1,6 +1,6 @@
 import Image from "deco-sites/std/components/Image.tsx";
 import { useState } from "preact/hooks";
-import { createAppState } from "$store/sdk/global.ts";
+import LoginForm from "$store/components/loginForm/LoginForm.tsx";
 export interface Props {
   menuHamburger?: Array<{
     title?: string;
@@ -15,12 +15,6 @@ export interface Props {
     title?: string;
     url?: string;
   }>;
-  logo: {
-    src?: string;
-    alt?: string;
-    width?: number;
-    height?: number;
-  };
   searchInput?: {
     placeholder?: string;
   };
@@ -37,12 +31,28 @@ export interface Props {
     url?: string;
   };
   language?: Array<string>;
+  logo?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
+  userNameInput: {
+    label: string;
+    placeholder: string;
+  };
+  passwordInput: {
+    label: string;
+    placeholder: string;
+  };
+  loginButton: {
+    label: string;
+  };
 }
 
 const Header = (props: Props) => {
   const [searchOpen, setSearchOpen] = useState(false);
-  const state = createAppState();
-  console.log("🚀 ~ file: HeaderCustom.tsx:45 ~ Header ~ state:", state);
+  const [loginOpen, setLoginOpen] = useState(false);
 
   const {
     menuHamburger,
@@ -54,6 +64,9 @@ const Header = (props: Props) => {
     iconsUrls,
     language,
     button,
+    loginButton,
+    passwordInput,
+    userNameInput,
   } = props;
 
   return (
@@ -88,7 +101,7 @@ const Header = (props: Props) => {
                 const { title, url } = item;
 
                 return (
-                  <li>
+                  <li key={title}>
                     <a href={url}>{title}</a>
                   </li>
                 );
@@ -120,7 +133,7 @@ const Header = (props: Props) => {
                     const { title, url } = item;
 
                     return (
-                      <li>
+                      <li key={title}>
                         <a href={url}>{title}</a>
                       </li>
                     );
@@ -132,9 +145,9 @@ const Header = (props: Props) => {
                 const { title, url } = item;
 
                 return (
-                  <li>
+                  <li key={title}>
                     {menuOthers.length - 1 == index
-                      ? <a className={"text-[#E37A69]"} href={url}>{title}</a>
+                      ? <a className={"text-accent"} href={url}>{title}</a>
                       : <a href={url}>{title}</a>}
                   </li>
                 );
@@ -168,19 +181,19 @@ const Header = (props: Props) => {
             )
             : null}
         </div>
-        <div className="justify-left md:justify-center flex md:navbar-center">
+        <div className="justify-left md:justify-center flex flex-col md:navbar-center max-w-[130px] sm:max-w-[180px]">
           <Image
             src={logo?.src || ""}
             alt={logo?.alt}
-            width={logo.width || 100}
-            height={logo.height || 60}
+            width={logo?.width || 100}
+            height={logo?.height || 60}
             loading="eager"
           />
         </div>
 
         <div className="pr:2 md:pr:0 md:justify-center md:gap-6 md:navbar-end">
           <button
-            className="btn btn-ghost"
+            className="btn btn-ghost px-1 sm:p-2"
             href={iconsUrls?.search}
             onClick={() => setSearchOpen(!searchOpen)}
             aria-label="search-button"
@@ -202,7 +215,7 @@ const Header = (props: Props) => {
           </button>
 
           <button
-            className="hidden btn btn-ghost xl:inline-flex"
+            className="hidden btn btn-ghost xl:inline-flex px-1 sm:p-2"
             aria-label="favorites-button"
             href={iconsUrls?.heart}
           >
@@ -262,7 +275,7 @@ const Header = (props: Props) => {
           </button>
 
           <button
-            className="btn btn-ghost"
+            className="btn btn-ghost px-1 sm:p-2"
             href={iconsUrls?.shop}
             aria-label="shopping cart Button"
           >
@@ -304,13 +317,22 @@ const Header = (props: Props) => {
 
           {button?.active && (
             <button
-              onClick={() => state.displayLoginForm.value = true}
+              onClick={() => setLoginOpen(true)}
               href={button?.url}
               className={"hidden btn w-20 h-10 min-h-full py-2 px-3 md:flex"}
             >
               {button?.label}
             </button>
           )}
+
+          <LoginForm
+            open={loginOpen}
+            close={() => setLoginOpen(false)}
+            loginButton={loginButton}
+            passwordInput={passwordInput}
+            userNameInput={userNameInput}
+            logo={logo}
+          />
         </div>
       </header>
     </>

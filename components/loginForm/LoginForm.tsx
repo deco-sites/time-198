@@ -1,8 +1,6 @@
-import Button from "$store/components/ui/Button.tsx";
-import { effect } from "@preact/signals-core";
+import QuickViewButton from "$store/components/quickView/QuickViewButton.tsx";
 import Modal from "$store/components/ui/Modal.tsx";
 import { useState } from "preact/hooks";
-import { createAppState } from "$store/sdk/global.ts";
 import Image from "deco-sites/std/components/Image.tsx";
 
 export type Props = {
@@ -23,17 +21,14 @@ export type Props = {
   loginButton: {
     label: string;
   };
+  open: boolean;
+  close: () => void;
 };
 
 function LoginForm(
-  { loginButton, passwordInput, userNameInput, logo }: Props,
+  { loginButton, passwordInput, userNameInput, logo, close, open }: Props,
 ) {
   const [submitting, setSubmitting] = useState(false);
-  const state = createAppState();
-
-  const close = () => {
-    state.displayLoginForm.value = false;
-  };
 
   function onSubmit(event: Event) {
     event.preventDefault();
@@ -49,10 +44,10 @@ function LoginForm(
       title="Faça seu login"
       mode="center"
       loading="lazy"
-      open={state.displayLoginForm.value}
+      open={open}
       onClose={close}
     >
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mt-4 max-w-[220px] mx-auto">
         <Image
           src={logo?.src || ""}
           alt={logo?.alt}
@@ -61,7 +56,7 @@ function LoginForm(
         />
       </div>
       <form
-        className="flex flex-col gap-4 p-12"
+        className="flex flex-col gap-4 p-12 min-w-[300px] sm:min-w-[500px]"
         onSubmit={(event) => {}}
       >
         <div className="flex flex-col gap-2">
@@ -88,14 +83,15 @@ function LoginForm(
             className="border border-base-300 p-2"
           />
         </div>
-        <Button
+        <QuickViewButton
+          square
           loading={submitting}
           onClick={onSubmit}
           type="submit"
           className="bg-blue-500 text-white"
         >
           {loginButton.label}
-        </Button>
+        </QuickViewButton>
       </form>
     </Modal>
   );

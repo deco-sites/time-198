@@ -63,7 +63,6 @@
               "./islands/HeaderCustom.tsx",
               "./islands/HeaderModals.tsx",
               "./islands/HeaderSearchbar.tsx",
-              "./islands/LoginForm.tsx",
               "./islands/Newsletter.tsx",
               "./islands/OutOfStock.tsx",
               "./islands/ProductImageZoom.tsx",
@@ -106,7 +105,7 @@
               "deco-sites/time-198/sections/HeroBanner/HeroBanner.198.tsx",
               "deco-sites/time-198/sections/Highlights.tsx",
               "deco-sites/time-198/sections/LinkTree.tsx",
-              "deco-sites/time-198/sections/LoginForm/LoginForm.tsx",
+              "deco-sites/time-198/sections/Newsletter/Newsletter.tsx",
               "deco-sites/time-198/sections/ProductDetails.tsx",
               "deco-sites/time-198/sections/ProductList/ProductList.198.tsx",
               "deco-sites/time-198/sections/ProductShelf.tsx",
@@ -6673,41 +6672,6 @@
           },
           "title": "Menu Others"
         },
-        "logo": {
-          "type": "object",
-          "properties": {
-            "src": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Src"
-            },
-            "alt": {
-              "type": [
-                "string",
-                "null"
-              ],
-              "title": "Alt"
-            },
-            "width": {
-              "type": [
-                "number",
-                "null"
-              ],
-              "title": "Width"
-            },
-            "height": {
-              "type": [
-                "number",
-                "null"
-              ],
-              "title": "Height"
-            }
-          },
-          "required": [],
-          "title": "Logo"
-        },
         "searchInput": {
           "type": "object",
           "properties": {
@@ -6805,16 +6769,7 @@
             "type": "string"
           },
           "title": "Language"
-        }
-      },
-      "required": [
-        "logo"
-      ],
-      "title": "deco-sites/time-198/components/headerCustom/HeaderCustom.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL2xvZ2luRm9ybS9Mb2dpbkZvcm0udHN4@Props": {
-      "type": "object",
-      "properties": {
+        },
         "logo": {
           "type": "object",
           "properties": {
@@ -6898,7 +6853,30 @@
         "passwordInput",
         "loginButton"
       ],
-      "title": "deco-sites/time-198/components/loginForm/LoginForm.tsx@Props"
+      "title": "deco-sites/time-198/components/headerCustom/HeaderCustom.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL25ld3NsZXR0ZXIvTmV3c2xldHRlci50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description"
+        },
+        "buttonText": {
+          "type": "string",
+          "title": "Button Text"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "buttonText"
+      ],
+      "title": "deco-sites/time-198/components/newsletter/Newsletter.tsx@Props"
     },
     "ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL3Byb2R1Y3RMaXN0L0hlYWRlci50c3g=@Props": {
       "type": "object",
@@ -6935,23 +6913,23 @@
         "variant": {
           "anyOf": [
             {
-              "type": "number",
-              "const": 1
+              "type": "string",
+              "const": "default"
             },
             {
-              "type": "number",
-              "const": 2
+              "type": "string",
+              "const": "dots-top"
             },
             {
-              "type": "number",
-              "const": 3
+              "type": "string",
+              "const": "dots-with-arrows"
             },
             {
-              "type": "number",
-              "const": 4
+              "type": "string",
+              "const": "dots-arrows-bottom"
             }
           ],
-          "type": "number",
+          "type": "string",
           "title": "Variant"
         }
       },
@@ -8137,6 +8115,24 @@
           "description": "Will be a darker tone of base-200 if not specified",
           "title": "Base-300"
         },
+        "base-400": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "description": "Will be a darker tone of base-300 if not specified",
+          "title": "Base-400"
+        },
+        "base-500": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "description": "Will be a darker tone of base-400 if not specified",
+          "title": "Base-500"
+        },
         "base-content": {
           "type": [
             "string",
@@ -8181,12 +8177,21 @@
           "format": "color",
           "description": "Will be a readable tone of info if not specified",
           "title": "Info-content"
+        },
+        "custom-1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "description": "Will be a darker tone if not specified",
+          "title": "Custom-1"
         }
       },
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors&ec17e7483e807251c357681fac2f5c97": {
+    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@058b5ba3e0f09586bcae1f2a4b126a66&Colors": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors"
@@ -8202,7 +8207,7 @@
           "required": []
         }
       ],
-      "title": "Colors&ec17e7483e807251c357681fac2f5c97"
+      "title": "058b5ba3e0f09586bcae1f2a4b126a66&Colors"
     },
     "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Miscellaneous": {
       "type": "object",
@@ -8305,7 +8310,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors&ec17e7483e807251c357681fac2f5c97",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@058b5ba3e0f09586bcae1f2a4b126a66&Colors",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -8456,6 +8461,10 @@
             {
               "type": "string",
               "const": "ArrowsPointingOut"
+            },
+            {
+              "type": "string",
+              "const": "Star"
             }
           ],
           "type": "string",
@@ -8654,6 +8663,10 @@
             {
               "type": "string",
               "const": "ArrowsPointingOut"
+            },
+            {
+              "type": "string",
+              "const": "Star"
             }
           ],
           "type": "string",
@@ -11035,30 +11048,14 @@
         }
       }
     },
-    "Li9pc2xhbmRzL0xvZ2luRm9ybS50c3g=": {
-      "title": "./islands/LoginForm.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL2xvZ2luRm9ybS9Mb2dpbkZvcm0udHN4@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "./islands/LoginForm.tsx"
-          ],
-          "default": "./islands/LoginForm.tsx"
-        }
-      }
-    },
     "Li9pc2xhbmRzL05ld3NsZXR0ZXIudHN4": {
       "title": "./islands/Newsletter.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL25ld3NsZXR0ZXIvTmV3c2xldHRlci50c3g=@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
@@ -11907,12 +11904,12 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9Mb2dpbkZvcm0vTG9naW5Gb3JtLnRzeA==": {
-      "title": "deco-sites/time-198/sections/LoginForm/LoginForm.tsx",
+    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9OZXdzbGV0dGVyL05ld3NsZXR0ZXIudHN4": {
+      "title": "deco-sites/time-198/sections/Newsletter/Newsletter.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL2xvZ2luRm9ybS9Mb2dpbkZvcm0udHN4@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL25ld3NsZXR0ZXIvTmV3c2xldHRlci50c3g=@Props"
         }
       ],
       "required": [
@@ -11922,9 +11919,9 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/time-198/sections/LoginForm/LoginForm.tsx"
+            "deco-sites/time-198/sections/Newsletter/Newsletter.tsx"
           ],
-          "default": "deco-sites/time-198/sections/LoginForm/LoginForm.tsx"
+          "default": "deco-sites/time-198/sections/Newsletter/Newsletter.tsx"
         }
       }
     },
@@ -12915,9 +12912,6 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlclNlYXJjaGJhci50c3g="
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL0xvZ2luRm9ybS50c3g="
-        },
-        {
           "$ref": "#/definitions/Li9pc2xhbmRzL05ld3NsZXR0ZXIudHN4"
         },
         {
@@ -13068,7 +13062,7 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9MaW5rVHJlZS50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9Mb2dpbkZvcm0vTG9naW5Gb3JtLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9OZXdzbGV0dGVyL05ld3NsZXR0ZXIudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9Qcm9kdWN0RGV0YWlscy50c3g="
