@@ -49,9 +49,9 @@ function ProductCard({
           className="w-full min-h-[128px] sm:min-w-[276px]"
           src={image || ""}
           alt={"image.alt"}
-          width={800}
+          width={276}
+          height={276}
           loading="lazy"
-          aspect-ratio="1:1"
         />
       </div>
       <div>
