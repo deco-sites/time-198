@@ -101,6 +101,7 @@
               "deco-sites/time-198/sections/Footer.tsx",
               "deco-sites/time-198/sections/Header.tsx",
               "deco-sites/time-198/sections/Header2S/Header2S.tsx",
+              "deco-sites/time-198/sections/HeroBanner/HeroBanner.198.tsx",
               "deco-sites/time-198/sections/Highlights.tsx",
               "deco-sites/time-198/sections/InteractiveBanner.tsx",
               "deco-sites/time-198/sections/LinkTree.tsx",
@@ -7874,7 +7875,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors&ec17e7483e807251c357681fac2f5c97": {
+    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@547d1aa5f349d8a61426907dd33467ca&Colors": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors"
@@ -7890,7 +7891,7 @@
           "required": []
         }
       ],
-      "title": "Colors&ec17e7483e807251c357681fac2f5c97"
+      "title": "547d1aa5f349d8a61426907dd33467ca&Colors"
     },
     "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Miscellaneous": {
       "type": "object",
@@ -7993,7 +7994,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors&ec17e7483e807251c357681fac2f5c97",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@547d1aa5f349d8a61426907dd33467ca&Colors",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -9253,7 +9254,11 @@
         },
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "The audience name (will be used on cookies).",
+          "description": "Add a meaningful short word for the audience name.",
+          "maxLength": 22,
+          "minLength": 3,
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
@@ -9369,7 +9374,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -9387,13 +9392,13 @@
           ]
         }
       ],
-      "title": "95abd76f92dd138f258080286726977e|WorkflowRef"
+      "title": "6fafe0f553db3c0685828404a37be338|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -11636,6 +11641,22 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9IZXJvQmFubmVyL0hlcm9CYW5uZXIuMTk4LnRzeA==": {
+      "title": "deco-sites/time-198/sections/HeroBanner/HeroBanner.198.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/time-198/sections/HeroBanner/HeroBanner.198.tsx"
+          ],
+          "default": "deco-sites/time-198/sections/HeroBanner/HeroBanner.198.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9IaWdobGlnaHRzLnRzeA==": {
       "title": "deco-sites/time-198/sections/Highlights.tsx",
       "type": "object",
@@ -12822,6 +12843,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9IZWFkZXIyUy9IZWFkZXIyUy50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9IZXJvQmFubmVyL0hlcm9CYW5uZXIuMTk4LnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9IaWdobGlnaHRzLnRzeA=="
