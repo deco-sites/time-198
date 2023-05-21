@@ -1,5 +1,6 @@
 import Image from "deco-sites/std/components/Image.tsx";
-
+import { useState } from "preact/hooks";
+import LoginForm from "$store/components/loginForm/LoginForm.tsx";
 export interface Props {
   menuHamburger?: Array<{
     title?: string;
@@ -14,13 +15,9 @@ export interface Props {
     title?: string;
     url?: string;
   }>;
-  logo: {
-    src?: string;
-    alt?: string;
-    width?: number;
-    height?: number;
+  searchInput?: {
+    placeholder?: string;
   };
-  searchInput?: true | false;
   iconsUrls?: {
     search?: string;
     heart?: string;
@@ -34,9 +31,29 @@ export interface Props {
     url?: string;
   };
   language?: Array<string>;
+  logo?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
+  userNameInput: {
+    label: string;
+    placeholder: string;
+  };
+  passwordInput: {
+    label: string;
+    placeholder: string;
+  };
+  loginButton: {
+    label: string;
+  };
 }
 
 const Header = (props: Props) => {
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+
   const {
     menuHamburger,
     titleMenuDropdown,
@@ -47,15 +64,18 @@ const Header = (props: Props) => {
     iconsUrls,
     language,
     button,
+    loginButton,
+    passwordInput,
+    userNameInput,
   } = props;
 
   return (
     <>
       <header
         id="fixed-header"
-        className="navbar z-50 fixed top-0 justify-between bg-white md:px-8 py-7 max-h-[80px] min-h-[72px] w-full  border border-solid border-b-primary bg-base lg:px-16 flex md:gap-8"
+        className="navbar z-50 fixed top-0 justify-between max-h-[72px] bg-white md:px-8 py-7 min-h-[72px] w-full  border border-solid border-b-primary bg-base lg:px-16 flex md:gap-8"
       >
-        <div className=" md:navbar-start">
+        <div className="">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <svg
@@ -135,23 +155,14 @@ const Header = (props: Props) => {
             </ul>
           </div>
         </div>
-
-        <div className="justify-left md:justify-center flex flex-col md:navbar-center max-w-[130px] sm:max-w-[180px]">
-          <Image
-            src={logo?.src || ""}
-            alt={logo?.alt}
-            width={logo?.width || 100}
-            height={logo?.height || 50}
-            loading="eager"
-          />
-
-          {searchInput
+        <div className="w-full hidden xl:block md:max-w-[400px]">
+          {searchOpen
             ? (
-              <div className="hidden form-control justify-center  relative lg:flex">
+              <div className="form-control justify-center  relative w-full flex">
                 <input
                   type="text"
                   aria-label="Search"
-                  placeholder="Search"
+                  placeholder={searchInput?.placeholder}
                   className="input input-bordered w-full pl-11"
                 />
                 <svg
@@ -170,11 +181,21 @@ const Header = (props: Props) => {
             )
             : null}
         </div>
+        <div className="justify-left md:justify-center flex flex-col md:navbar-center max-w-[130px] sm:max-w-[180px]">
+          <Image
+            src={logo?.src || ""}
+            alt={logo?.alt}
+            width={logo?.width || 100}
+            height={logo?.height || 60}
+            loading="eager"
+          />
+        </div>
 
         <div className="pr:2 md:pr:0 md:justify-center md:gap-6 md:navbar-end">
           <button
             className="btn btn-ghost px-1 sm:p-2"
             href={iconsUrls?.search}
+            onClick={() => setSearchOpen(!searchOpen)}
             aria-label="search-button"
           >
             <svg
@@ -296,12 +317,22 @@ const Header = (props: Props) => {
 
           {button?.active && (
             <button
+              onClick={() => setLoginOpen(true)}
               href={button?.url}
               className={"hidden btn w-20 h-10 min-h-full py-2 px-3 md:flex"}
             >
               {button?.label}
             </button>
           )}
+
+          <LoginForm
+            open={loginOpen}
+            close={() => setLoginOpen(false)}
+            loginButton={loginButton}
+            passwordInput={passwordInput}
+            userNameInput={userNameInput}
+            logo={logo}
+          />
         </div>
       </header>
     </>

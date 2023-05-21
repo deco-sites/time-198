@@ -27,7 +27,7 @@ function Newsletter({
   };
 
   return (
-    <div className="max-w-[90%] sm:max-w-[80%] mx-auto outline outline-base-500 flex flex-col items-center py-10 px-5 my-5 text-center">
+    <div className="max-w-[90%] sm:max-w-[80%] mx-auto border border-base-500 flex flex-col items-center py-10 px-5 my-5 text-center">
       <h4 className="text-lg font-bold">{title}</h4>
       <p className="text-sm">{description}</p>
       <form

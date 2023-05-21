@@ -26,7 +26,7 @@ function HeroBanner({
 
   return (
     <div className="w-full h-[380px] relative mt-20">
-      <div className="flex flex-col items-center py-10 px-6 backdrop-blur-sm text-base-500 absolute top-1/2 transform -translate-y-1/2 right-1/2 translate-x-1/2 sm:(right-24 translate-x-0) bg-white outline outline-offset-2 outline-white min-w-[280px]">
+      <div className="flex flex-col items-center py-10 px-6 backdrop-blur-sm text-base-500 absolute top-1/2 transform -translate-y-1/2 right-1/2 translate-x-1/2 sm:right-24 sm:translate-x-0 bg-white outline outline-offset-2 outline-white min-w-[280px]">
         <h2 className="text-md sm:text-xl">{title}</h2>
         {description ? <p className="text-sm">{description}</p> : null}
         {button
