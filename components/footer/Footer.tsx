@@ -61,10 +61,6 @@ function Footer({ sections = [] }: Props) {
       <div>
         <div class="container w-full flex flex-col divide-y divide-primary-content">
           <FooterContainer>
-            <Newsletter />
-          </FooterContainer>
-
-          <FooterContainer>
             {/* Desktop view */}
             <ul class="hidden sm:flex flex-row gap-20">
               {sections.map((section) => (
