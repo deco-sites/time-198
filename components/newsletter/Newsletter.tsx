@@ -60,8 +60,6 @@ function Newsletter({
           </p>
         )
         : null}
-
-      <button></button>
     </div>
   );
 }
