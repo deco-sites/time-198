@@ -102,8 +102,8 @@
               "deco-sites/time-198/sections/Footer.tsx",
               "deco-sites/time-198/sections/Header.tsx",
               "deco-sites/time-198/sections/HeaderCustom/HeaderCustom.tsx",
+              "deco-sites/time-198/sections/HeroBanner/HeroBanner.198.tsx",
               "deco-sites/time-198/sections/Highlights.tsx",
-              "deco-sites/time-198/sections/InteractiveBanner.tsx",
               "deco-sites/time-198/sections/LinkTree.tsx",
               "deco-sites/time-198/sections/ProductDetails.tsx",
               "deco-sites/time-198/sections/ProductList/ProductList.198.tsx",
@@ -8789,6 +8789,80 @@
       ],
       "title": "deco-sites/time-198/components/header/Header.tsx@Props"
     },
+    "ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL2Jhbm5lcnMvYmFubmVySGVyby50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Description"
+        },
+        "image": {
+          "type": "object",
+          "properties": {
+            "src": {
+              "type": "string",
+              "title": "Src"
+            },
+            "alt": {
+              "type": "string",
+              "title": "Alt"
+            },
+            "width": {
+              "type": "number",
+              "title": "Width"
+            },
+            "height": {
+              "type": "number",
+              "title": "Height"
+            }
+          },
+          "required": [
+            "src",
+            "alt",
+            "width",
+            "height"
+          ],
+          "title": "Image"
+        },
+        "button": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "title": "Label"
+            },
+            "href": {
+              "type": "string",
+              "title": "Href"
+            },
+            "target": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Target"
+            }
+          },
+          "required": [
+            "label",
+            "href"
+          ],
+          "title": "Button"
+        }
+      },
+      "required": [
+        "title",
+        "image"
+      ],
+      "title": "deco-sites/time-198/components/banners/bannerHero.tsx@Props"
+    },
     "ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL3VpL0hpZ2hsaWdodHMudHN4@Highlight": {
       "type": "object",
       "properties": {
@@ -8840,9 +8914,6 @@
         "title"
       ],
       "title": "deco-sites/time-198/components/ui/Highlights.tsx@Props"
-    },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@SectionProps": {
-      "title": "deco-cx/live/blocks/section.ts@SectionProps"
     },
     "ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL3VpL0xpbmtUcmVlLnRzeA==@Link": {
       "type": "object",
@@ -9254,7 +9325,11 @@
         },
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "The audience name (will be used on cookies).",
+          "description": "Add a meaningful short word for the audience name.",
+          "maxLength": 22,
+          "minLength": 3,
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
@@ -9370,7 +9445,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -9388,13 +9463,13 @@
           ]
         }
       ],
-      "title": "95abd76f92dd138f258080286726977e|WorkflowRef"
+      "title": "6fafe0f553db3c0685828404a37be338|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -11658,6 +11733,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9IZXJvQmFubmVyL0hlcm9CYW5uZXIuMTk4LnRzeA==": {
+      "title": "deco-sites/time-198/sections/HeroBanner/HeroBanner.198.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9jb21wb25lbnRzL2Jhbm5lcnMvYmFubmVySGVyby50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/time-198/sections/HeroBanner/HeroBanner.198.tsx"
+          ],
+          "default": "deco-sites/time-198/sections/HeroBanner/HeroBanner.198.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9IaWdobGlnaHRzLnRzeA==": {
       "title": "deco-sites/time-198/sections/Highlights.tsx",
       "type": "object",
@@ -11676,27 +11772,6 @@
             "deco-sites/time-198/sections/Highlights.tsx"
           ],
           "default": "deco-sites/time-198/sections/Highlights.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9JbnRlcmFjdGl2ZUJhbm5lci50c3g=": {
-      "title": "deco-sites/time-198/sections/InteractiveBanner.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@SectionProps"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/time-198/sections/InteractiveBanner.tsx"
-          ],
-          "default": "deco-sites/time-198/sections/InteractiveBanner.tsx"
         }
       }
     },
@@ -12849,10 +12924,10 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9IZWFkZXJDdXN0b20vSGVhZGVyQ3VzdG9tLnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9IaWdobGlnaHRzLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9IZXJvQmFubmVyL0hlcm9CYW5uZXIuMTk4LnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9JbnRlcmFjdGl2ZUJhbm5lci50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9IaWdobGlnaHRzLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9MaW5rVHJlZS50c3g="

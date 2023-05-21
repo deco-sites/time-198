@@ -25,7 +25,7 @@ import * as $$$$$$$$1 from "./sections/ProductList/ProductList.198.tsx";
 import * as $$$$$$$$2 from "./sections/DesignSystem.tsx";
 import * as $$$$$$$$3 from "./sections/LinkTree.tsx";
 import * as $$$$$$$$4 from "./sections/Features.tsx";
-import * as $$$$$$$$5 from "./sections/InteractiveBanner.tsx";
+import * as $$$$$$$$5 from "./sections/HeroBanner/HeroBanner.198.tsx";
 import * as $$$$$$$$6 from "./sections/WishlistGallery.tsx";
 import * as $$$$$$$$7 from "./sections/CookieConsent.tsx";
 import * as $$$$$$$$8 from "./sections/ProductDetails.tsx";
@@ -200,8 +200,8 @@ const manifest = {
     "deco-sites/time-198/sections/Footer.tsx": $$$$$$$$9,
     "deco-sites/time-198/sections/Header.tsx": $$$$$$$$13,
     "deco-sites/time-198/sections/HeaderCustom/HeaderCustom.tsx": $$$$$$$$10,
+    "deco-sites/time-198/sections/HeroBanner/HeroBanner.198.tsx": $$$$$$$$5,
     "deco-sites/time-198/sections/Highlights.tsx": $$$$$$$$15,
-    "deco-sites/time-198/sections/InteractiveBanner.tsx": $$$$$$$$5,
     "deco-sites/time-198/sections/LinkTree.tsx": $$$$$$$$3,
     "deco-sites/time-198/sections/ProductDetails.tsx": $$$$$$$$8,
     "deco-sites/time-198/sections/ProductList/ProductList.198.tsx": $$$$$$$$1,
