@@ -19,7 +19,7 @@ function ProductList({
   seeAllButton,
 }: Props) {
   return (
-    <div className="p-6 w-full mx-auto">
+    <div className="p-6 w-full mx-auto mt-20">
       <Header {...header} />
       <ProductShelf products={products} />
       {seeAllButton
