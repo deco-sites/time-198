@@ -1,5 +1,7 @@
-import Header, { type Props as HeaderProps } from "./Header.tsx";
-import ProductShelf from "./ProductShelf.tsx";
+import Header, {
+  type Props as HeaderProps,
+} from "$store/components/productList/Header.tsx";
+import ProductShelf from "$store/components/productList/ProductShelf.tsx";
 import type { LoaderReturnType } from "$live/types.ts";
 import type { Product } from "deco-sites/std/commerce/types.ts";
 
@@ -15,7 +17,7 @@ export interface Props {
 
 function ProductList({
   header,
-  products,
+  products = [],
   seeAllButton,
 }: Props) {
   return (
@@ -26,7 +28,7 @@ function ProductList({
         ? (
           <div className="flex justify-center mt-6">
             <a href={seeAllButton.href} target={seeAllButton.target}>
-              <button className="py-1.5 rounded-none bg-transparent px-20 color-secondary-focus hover:underline transition duration-200 border border-secondary-focus">
+              <button className="py-1.5 rounded-none bg-transparent px-10 sm:px-20 color-secondary-focus hover:underline transition duration-200 border border-secondary-focus">
                 {seeAllButton.label ?? "See all products"}
               </button>
             </a>

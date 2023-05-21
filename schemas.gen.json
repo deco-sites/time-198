@@ -6623,23 +6623,23 @@
         "variant": {
           "anyOf": [
             {
-              "type": "number",
-              "const": 1
+              "type": "string",
+              "const": "default"
             },
             {
-              "type": "number",
-              "const": 2
+              "type": "string",
+              "const": "dots-top"
             },
             {
-              "type": "number",
-              "const": 3
+              "type": "string",
+              "const": "dots-with-arrows"
             },
             {
-              "type": "number",
-              "const": 4
+              "type": "string",
+              "const": "dots-arrows-bottom"
             }
           ],
-          "type": "number",
+          "type": "string",
           "title": "Variant"
         }
       },
@@ -7825,6 +7825,24 @@
           "description": "Will be a darker tone of base-200 if not specified",
           "title": "Base-300"
         },
+        "base-400": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "description": "Will be a darker tone of base-300 if not specified",
+          "title": "Base-400"
+        },
+        "base-500": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "description": "Will be a darker tone of base-400 if not specified",
+          "title": "Base-500"
+        },
         "base-content": {
           "type": [
             "string",
@@ -7869,12 +7887,21 @@
           "format": "color",
           "description": "Will be a readable tone of info if not specified",
           "title": "Info-content"
+        },
+        "custom-1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "description": "Will be a darker tone if not specified",
+          "title": "Custom-1"
         }
       },
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors&ec17e7483e807251c357681fac2f5c97": {
+    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@78a3fd2d0eb8e8f7ea625b01c0f83e7a&Colors": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors"
@@ -7890,7 +7917,7 @@
           "required": []
         }
       ],
-      "title": "Colors&ec17e7483e807251c357681fac2f5c97"
+      "title": "78a3fd2d0eb8e8f7ea625b01c0f83e7a&Colors"
     },
     "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Miscellaneous": {
       "type": "object",
@@ -7993,7 +8020,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors&ec17e7483e807251c357681fac2f5c97",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@78a3fd2d0eb8e8f7ea625b01c0f83e7a&Colors",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -8144,6 +8171,10 @@
             {
               "type": "string",
               "const": "ArrowsPointingOut"
+            },
+            {
+              "type": "string",
+              "const": "Star"
             }
           ],
           "type": "string",
@@ -8342,6 +8373,10 @@
             {
               "type": "string",
               "const": "ArrowsPointingOut"
+            },
+            {
+              "type": "string",
+              "const": "Star"
             }
           ],
           "type": "string",
