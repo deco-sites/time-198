@@ -26,7 +26,7 @@ function ProductCard({
       onClick={() => setQuickViewIsOpen(true)}
     >
       <div className="w-full h-full relative">
-        <div className="absolute top-7 right-7 left-auto text-base-400">
+        <div className="absolute top-2 right-2 sm:(top-7 right-7) left-auto text-base-400">
           {/* Não temos o ícone do figma disponível */}
           <Icon
             width={20}

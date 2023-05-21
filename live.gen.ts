@@ -34,10 +34,11 @@ import * as $$$$$$$$11 from "./sections/DesignSystem.tsx";
 import * as $$$$$$$$12 from "./sections/HeroBanner/HeroBanner.198.tsx";
 import * as $$$$$$$$13 from "./sections/Header.tsx";
 import * as $$$$$$$$14 from "./sections/ProductList/ProductList.198.tsx";
-import * as $$$$$$$$15 from "./sections/ProductDetails.tsx";
-import * as $$$$$$$$16 from "./sections/Highlights.tsx";
-import * as $$$$$$$$17 from "./sections/WhatsApp.tsx";
-import * as $$$$$$$$18 from "./sections/Carousel.tsx";
+import * as $$$$$$$$15 from "./sections/Newsletter/Newsletter.tsx";
+import * as $$$$$$$$16 from "./sections/ProductDetails.tsx";
+import * as $$$$$$$$17 from "./sections/Highlights.tsx";
+import * as $$$$$$$$18 from "./sections/WhatsApp.tsx";
+import * as $$$$$$$$19 from "./sections/Carousel.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -191,7 +192,7 @@ const manifest = {
     "deco-sites/std/sections/SEOPLP.tsx": i2$$$$12,
     "deco-sites/time-198/sections/BannerGrid.tsx": $$$$$$$$5,
     "deco-sites/time-198/sections/BannerPLP.tsx": $$$$$$$$4,
-    "deco-sites/time-198/sections/Carousel.tsx": $$$$$$$$18,
+    "deco-sites/time-198/sections/Carousel.tsx": $$$$$$$$19,
     "deco-sites/time-198/sections/CookieConsent.tsx": $$$$$$$$10,
     "deco-sites/time-198/sections/DesignSystem.tsx": $$$$$$$$11,
     "deco-sites/time-198/sections/Features.tsx": $$$$$$$$3,
@@ -199,14 +200,15 @@ const manifest = {
     "deco-sites/time-198/sections/Header.tsx": $$$$$$$$13,
     "deco-sites/time-198/sections/HeaderCustom/HeaderCustom.tsx": $$$$$$$$2,
     "deco-sites/time-198/sections/HeroBanner/HeroBanner.198.tsx": $$$$$$$$12,
-    "deco-sites/time-198/sections/Highlights.tsx": $$$$$$$$16,
+    "deco-sites/time-198/sections/Highlights.tsx": $$$$$$$$17,
     "deco-sites/time-198/sections/LinkTree.tsx": $$$$$$$$1,
-    "deco-sites/time-198/sections/ProductDetails.tsx": $$$$$$$$15,
+    "deco-sites/time-198/sections/Newsletter/Newsletter.tsx": $$$$$$$$15,
+    "deco-sites/time-198/sections/ProductDetails.tsx": $$$$$$$$16,
     "deco-sites/time-198/sections/ProductList/ProductList.198.tsx": $$$$$$$$14,
     "deco-sites/time-198/sections/ProductShelf.tsx": $$$$$$$$7,
     "deco-sites/time-198/sections/QuickView/QuickView.198.tsx": $$$$$$$$8,
     "deco-sites/time-198/sections/SearchResult.tsx": $$$$$$$$6,
-    "deco-sites/time-198/sections/WhatsApp.tsx": $$$$$$$$17,
+    "deco-sites/time-198/sections/WhatsApp.tsx": $$$$$$$$18,
     "deco-sites/time-198/sections/WishlistGallery.tsx": $$$$$$$$0,
   },
   "loaders": {
