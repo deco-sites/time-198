@@ -1,5 +1,7 @@
-import Header, { type Props as HeaderProps } from "./Header.tsx";
-import ProductShelf from "./ProductShelf.tsx";
+import Header, {
+  type Props as HeaderProps,
+} from "$store/components/productList/Header.tsx";
+import ProductShelf from "$store/components/productList/ProductShelf.tsx";
 import type { LoaderReturnType } from "$live/types.ts";
 import type { Product } from "deco-sites/std/commerce/types.ts";
 
@@ -15,7 +17,7 @@ export interface Props {
 
 function ProductList({
   header,
-  products,
+  products = [],
   seeAllButton,
 }: Props) {
   return (

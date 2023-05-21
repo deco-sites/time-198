@@ -6623,23 +6623,23 @@
         "variant": {
           "anyOf": [
             {
-              "type": "number",
-              "const": 1
+              "type": "string",
+              "const": "default"
             },
             {
-              "type": "number",
-              "const": 2
+              "type": "string",
+              "const": "dots-top"
             },
             {
-              "type": "number",
-              "const": 3
+              "type": "string",
+              "const": "dots-with-arrows"
             },
             {
-              "type": "number",
-              "const": 4
+              "type": "string",
+              "const": "dots-arrows-bottom"
             }
           ],
-          "type": "number",
+          "type": "string",
           "title": "Variant"
         }
       },
@@ -7874,7 +7874,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors&ec17e7483e807251c357681fac2f5c97": {
+    "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@547d1aa5f349d8a61426907dd33467ca&Colors": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors"
@@ -7890,7 +7890,7 @@
           "required": []
         }
       ],
-      "title": "Colors&ec17e7483e807251c357681fac2f5c97"
+      "title": "547d1aa5f349d8a61426907dd33467ca&Colors"
     },
     "ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Miscellaneous": {
       "type": "object",
@@ -7993,7 +7993,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@Colors&ec17e7483e807251c357681fac2f5c97",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy90aW1lLTE5OC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4@547d1aa5f349d8a61426907dd33467ca&Colors",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -8144,6 +8144,10 @@
             {
               "type": "string",
               "const": "ArrowsPointingOut"
+            },
+            {
+              "type": "string",
+              "const": "Star"
             }
           ],
           "type": "string",
@@ -8342,6 +8346,10 @@
             {
               "type": "string",
               "const": "ArrowsPointingOut"
+            },
+            {
+              "type": "string",
+              "const": "Star"
             }
           ],
           "type": "string",
