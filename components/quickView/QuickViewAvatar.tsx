@@ -18,7 +18,7 @@ const colors: Record<string, string> = {
   // Color variants - only applied when no color as content is passed
   "active": "bg-neutral-focus text-white ring-neutral-focus",
   "disabled": "bg-neutral-content text-neutral",
-  "default": "bg-neutral text-neutral-content",
+  "default": "bg-neutral text-base-500 text-neutral-content",
   "ghost": "bg-transparent text-base border border-base-content",
 };
 
@@ -43,7 +43,7 @@ function Avatar({ content, variant = "default" }: Props) {
           variants[variant]
         }`}
       >
-        <span class="text-base-500 text-sm font-caption uppercase">
+        <span class="text-sm font-caption uppercase">
           {colors[content] ? "" : content.substring(0, 2)}
         </span>
       </div>

@@ -72,7 +72,7 @@ function QuickView(
               />
             </div>
             <div className="absolute top-4 left-4 right-auto bg-accent py-1 px-2">
-              <p className="text-sm">40% OFF</p>
+              <p className="text-sm text-white">40% OFF</p>
             </div>
             <Slider class="carousel carousel-center w-full h-full col-span-full row-span-full scrollbar-none gap-6">
               {product.image?.map((image, index) => (

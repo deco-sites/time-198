@@ -112,11 +112,12 @@ function Header({
         {categories.map(({ name, href }, index) => (
           // TODO: improve this way to handle the selected category
           <li
-            className="py-2 flex items-center"
+            className="py-2 flex items-center cursor-pointer"
             key={name}
             onClick={() => setSelectedCategory(index)}
           >
-            <a
+            {/* TODO: emovemos o link para evitar scroll-to-top ao clicar, colocar de volta quando houver melhor definição da troca de categorias. */}
+            <p
               href={href}
               className={`text-base text-base-500 border-b-[1.5px] ${
                 selectedCategory === index
@@ -125,7 +126,7 @@ function Header({
               }`}
             >
               {name}
-            </a>
+            </p>
           </li>
         ))}
       </ul>

@@ -25,7 +25,17 @@ function ProductCard({
       className="h-full w-full flex flex-col p-2 gap-4 cursor-pointer"
       onClick={() => setQuickViewIsOpen(true)}
     >
-      <div className="w-full h-full">
+      <div className="w-full h-full relative">
+        <div className="absolute top-7 right-7 left-auto text-base-400">
+          {/* Não temos o ícone do figma disponível */}
+          <Icon
+            width={20}
+            height={20}
+            id="Heart"
+            fill="none"
+            strokeWidth={2}
+          />
+        </div>
         <Image
           className="w-full min-h-[128px] sm:min-w-[276px]"
           src={image || ""}
@@ -48,7 +58,10 @@ function ProductCard({
         {product.offers?.highPrice
           ? (
             <p className="text-xs text-base-400 line-through">
-              $ {product.offers?.highPrice}
+              {priceFormatter(priceCurrency)
+                .format(
+                  product.offers?.highPrice || 0,
+                )}
             </p>
           )
           : null}

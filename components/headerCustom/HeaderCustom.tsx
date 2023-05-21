@@ -81,7 +81,7 @@ const Header = (props: Props) => {
                 const { title, url } = item;
 
                 return (
-                  <li>
+                  <li key={title}>
                     <a href={url}>{title}</a>
                   </li>
                 );
@@ -113,7 +113,7 @@ const Header = (props: Props) => {
                     const { title, url } = item;
 
                     return (
-                      <li>
+                      <li key={title}>
                         <a href={url}>{title}</a>
                       </li>
                     );
@@ -125,9 +125,9 @@ const Header = (props: Props) => {
                 const { title, url } = item;
 
                 return (
-                  <li>
+                  <li key={title}>
                     {menuOthers.length - 1 == index
-                      ? <a className={"text-[#E37A69]"} href={url}>{title}</a>
+                      ? <a className={"text-accent"} href={url}>{title}</a>
                       : <a href={url}>{title}</a>}
                   </li>
                 );
@@ -136,7 +136,7 @@ const Header = (props: Props) => {
           </div>
         </div>
 
-        <div className="justify-left md:justify-center flex flex-col md:navbar-center">
+        <div className="justify-left md:justify-center flex flex-col md:navbar-center max-w-[130px] sm:max-w-[180px]">
           <Image
             src={logo?.src || ""}
             alt={logo?.alt}
@@ -173,7 +173,7 @@ const Header = (props: Props) => {
 
         <div className="pr:2 md:pr:0 md:justify-center md:gap-6 md:navbar-end">
           <button
-            className="btn btn-ghost"
+            className="btn btn-ghost px-1 sm:p-2"
             href={iconsUrls?.search}
             aria-label="search-button"
           >
@@ -194,7 +194,7 @@ const Header = (props: Props) => {
           </button>
 
           <button
-            className="hidden btn btn-ghost xl:inline-flex"
+            className="hidden btn btn-ghost xl:inline-flex px-1 sm:p-2"
             aria-label="favorites-button"
             href={iconsUrls?.heart}
           >
@@ -254,7 +254,7 @@ const Header = (props: Props) => {
           </button>
 
           <button
-            className="btn btn-ghost"
+            className="btn btn-ghost px-1 sm:p-2"
             href={iconsUrls?.shop}
             aria-label="shopping cart Button"
           >
